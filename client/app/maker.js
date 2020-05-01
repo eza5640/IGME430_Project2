@@ -17,9 +17,7 @@ const handleCode = (e) => {
 const CodeForm = (props) => {
     return (
         <form id="codeForm" name="codeForm" onSubmit={handleCode} action="/maker" method="POST" className="codeForm">
-            <label htmlFor="name">Name of Project: </label>
-            <input id="codeName" type="text" name="name" placeholder="Code Name" />
-            <label htmlFor="codeContent">Enter code here: </label>
+            <input id="codeName" type="text" name="name" placeholder="Project Name" />
             <textarea id="codeContent" rows="20" cols="50" name="codeContent" placeholder="Input code here..."></textarea>
             <input type="hidden" name="_csrf" value = {props.csrf} />
             <input className="makeCodeSubmit" type="submit" value="Make Code" />

@@ -20,17 +20,7 @@ var CodeForm = function CodeForm(props) {
     return React.createElement(
         "form",
         { id: "codeForm", name: "codeForm", onSubmit: handleCode, action: "/maker", method: "POST", className: "codeForm" },
-        React.createElement(
-            "label",
-            { htmlFor: "name" },
-            "Name of Project: "
-        ),
-        React.createElement("input", { id: "codeName", type: "text", name: "name", placeholder: "Code Name" }),
-        React.createElement(
-            "label",
-            { htmlFor: "codeContent" },
-            "Enter code here: "
-        ),
+        React.createElement("input", { id: "codeName", type: "text", name: "name", placeholder: "Project Name" }),
         React.createElement("textarea", { id: "codeContent", rows: "20", cols: "50", name: "codeContent", placeholder: "Input code here..." }),
         React.createElement("input", { type: "hidden", name: "_csrf", value: props.csrf }),
         React.createElement("input", { className: "makeCodeSubmit", type: "submit", value: "Make Code" })

@@ -43,7 +43,7 @@ CodeSchema.statics.findByOwner = (ownerId, callback) => {
     owner: convertId(ownerId),
   };
 
-  return CodeModel.find(search).select('name').exec(callback);
+  return CodeModel.find(search).select('name codeContent').exec(callback);
 };
 
 CodeModel = mongoose.model('Code', CodeSchema);
